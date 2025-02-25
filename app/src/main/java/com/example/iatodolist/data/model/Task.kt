@@ -1,3 +1,11 @@
 package com.example.iatodolist.data.model
 
-data class Task(val text: String)
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
+data class Task(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0,
+    val text: String
+)
